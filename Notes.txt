@@ -1,0 +1,51 @@
+
+#use different color panels for each queue
+have each q thereby color coded
+
+Tasks:
+
+    -overall design
+        -using style.css
+        -background colors for queues so you can tell where you are?
+        - background for whole page to make it look nicer
+            - tried it I thought it was worse simple sometimes better
+
+    - TA page design
+        -what happens when take top or take student is pressed
+            - modal?
+        - Put in the details somewhere
+        
+        
+    - Student Page design
+        - use style.css
+        - keep as sm columns as seeing both queues is more important
+        - students don't need to see details
+    
+    -Make more populated page
+    
+    -Demo
+        - decide on control flow and link stuff together
+    
+    - Presentation
+        - Lots of it is intentionally functional over best looking
+        - This could be polished out to a degree
+        - Stuff we would like to add but lacked time / skills
+            -reorderable queues for mobile
+    
+    -THe word queue no longer looks like a word to message
+
+    -would like to get the form to auto collapse on submit
+
+
+
+Mongo c9 setup:
+$ mkdir data
+$ echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
+$ chmod a+x mongod
+
+
+Bootstrap Help:
+http://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp
+http://www.w3schools.com/bootstrap/bootstrap_panels.asp
+http://stackoverflow.com/questions/14684877/angular-clear-form-input-after-submit
+http://jsfiddle.net/razh/NFNvc/
