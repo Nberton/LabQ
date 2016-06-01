@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" ng-app="labQApp">
+  <head>
+    <title>LabQ: TA</title>
+    <link rel="stylesheet" href="/css/bootstrap3.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <!-- Title Row -->
+    <div class="container" ng-controller="TAController">
+      <div class="row" id="title">
+        <h1 class="text-center">LABQ</h1>
+      </div>     
+      <!-- Status Row for Mobile so they can get good overview -->
+      <div class="row hidden-md hidden-lg">
+        <h2 class ="text-center"><p>Queue Status</p> Check: {{check.length}} Help: {{help.length}}</h2>
+      </div>
+      <!-- Labs Row -->
+      <div class="row">
+        <!-- this is where a angular call would go to dynamically create
+          cols for labs divide 12
+        -->
+        <div class="col-md-6 queue" id="check">
+            <h2>Check Queue : {{check.length}} <button class="btn btn-danger btn-lg" ng-click="takeCheckStudent(0)">Take Top</button></h2>
+            <div class="studentlist" ng-repeat="student in check">
+                <div class="panel panel-default entry">
+                  <div class="panel-body">
+                      <strong>{{student.name}}</strong> - {{student.time}} <button class="btn btn-info btn-sm" ng-click="takeCheckStudent($index)">Take Student</button>
+                  </div>
+                  <div class="panel-footer">{{student.details}}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 queue" id="help">
+            <h2>Help Queue : {{help.length}} <button class="btn btn-danger btn-lg">Take Top</button></h2>
+            <div class="studentlist" ng-repeat="student in help">
+                <div class="panel panel-default entry">
+                  <div class="panel-body">
+                      <strong>{{student.name}}</strong> - {{student.time}} <button class="btn btn-info btn-sm" ng-click="takeHelpStudent($index)">Take Student</button>
+                  </div>
+                  <div class="panel-footer">{{student.details}}</div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap3.min.js"></script>
+    <script src="/js/angular1.5.min.js"></script>
+    <script src="/js/q.js"></script>
+  </body>
+</html>

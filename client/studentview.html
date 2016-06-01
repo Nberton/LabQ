@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" ng-app="labQApp">
+  <head>
+    <title>LabQ: Student</title>
+    <link rel="stylesheet" href="/css/bootstrap3.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <!-- Title Row -->
+    <div class="container" ng-controller="QController">
+      <div class="row" id="title">
+        <h1 class="text-center">LABQ</h1>
+      </div>
+      <!-- Labs Row -->
+      <div class="row">
+        <!-- this is where a angular call would go to dynamically create
+          cols for labs divide 12
+        -->
+        <div class="col-sm-6 queue" id="check">
+          <h2>Check Queue : {{check.length}} <button data-toggle="collapse" class="btn btn-primary" data-target="#qForm">Enter Q</button></h2>
+          <div id="qForm" class="collapse">
+            <form ng-submit="checkAdd(cN,cD)">
+              <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="Text" class="form-control" ng-model="cN" id="Name" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="Details">Details</label>
+                <input type="Text" class="form-control" id="Details" ng-model="cD" placeholder="Details">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+          <div class="studentlist" ng-repeat="student in check">
+            <div class="panel panel-default entry">
+              <div class="panel-body"><strong>{{student.name}}</strong> - {{student.time}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 queue" id="help">
+          <h2>Help Queue : {{help.length}} <button data-toggle="collapse" class="btn btn-primary" data-target="#qForm2">Enter Q</button></h2>
+          <div id="qForm2" class="collapse">
+            <form name="helpForm" ng-submit="helpAdd(hN,hD)">
+              <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="Text" class="form-control" ng-model="hN" id="Name" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="Details">Details</label>
+                <input type="Text" class="form-control" id="Details" ng-model="hD" placeholder="Details">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+          <div class="studentlist" ng-repeat="student in help">
+            <div class="panel panel-default entry">
+              <div class="panel-body"><strong>{{student.name}}</strong> - {{student.time}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap3.min.js"></script>
+    <script src="/js/angular1.5.min.js"></script>
+    <script src="/js/q.js"></script>
+  </body>
+</html>

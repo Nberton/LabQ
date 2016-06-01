@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Chat Example</title>
+    <link rel="stylesheet" href="/css/bootstrap3.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <!-- Title Row -->
+    <div class="container">
+      <div class="row" id="title">
+        <h1 class="text-center">LABQ</h1>
+      </div>
+      <!-- Labs Row -->
+      <div class="row">
+        <!-- this is where a angular call would go to dynamically create
+          cols for labs divide 12
+        -->
+        <div class="col-sm-6 queue" id="check">
+          <h2>Check Queue <button data-toggle="collapse" class="btn btn-primary" data-target="#qForm">Enter Q</button></h2>
+          <div id="qForm" class="collapse">
+            <form>
+            <div class="form-group">
+              <label for="Name">Name</label>
+              <input type="Text" class="form-control" id="Name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="Details">Details</label>
+              <input type="Text" class="form-control" id="Details" placeholder="Details">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-6 queue" id="help">
+          <h2>Help Queue <button data-toggle="collapse" class="btn btn-primary" data-target="#qForm2">Enter Q</button></h2>
+          <div id="qForm2" class="collapse">
+            <form >
+            <div class="form-group">
+              <label for="Name">Name</label>
+              <input type="Text" class="form-control" id="Name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="Details">Details</label>
+              <input type="Text" class="form-control" id="Details" placeholder="Details">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap3.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+  </body>
+</html>

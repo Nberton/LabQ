@@ -1,0 +1,39 @@
+.entry .panel-body strong{
+    font-size: 1.5em;
+    
+}
+
+body{
+    /*background-color:#666666;*/
+}
+
+
+.queue{
+    padding:10px;
+    /*border-right: solid;*/
+    /*border-color: #b3b3b3;*/
+    text-align:center;
+}
+
+.queue .form-group{
+    text-align:left;
+}
+
+.panel{
+    width: 75%;
+    margin-left:12.5%;
+    margin-right:12.5%;
+}
+
+#check{
+    background-color: #33cc33;
+}
+
+#help{
+   background-color:#66ccff;
+}
+
+body h1{
+    font-size: 4em;
+    /*color: white ;*/
+}
